@@ -1,0 +1,25 @@
+Source: qt-kiosk-browser
+Section: utils
+Priority: optional
+Maintainer: Dongjin Kim <tobetter@gmail.com>
+Build-Depends: debhelper (>= 9),
+	qtbase5-dev,
+	qtbase5-dev-tools,
+	qml,
+	qml-module-qtquick2,
+	qtwebengine5-dev
+Standards-Version: 3.9.5
+X-Python3-Version: >= 3.7
+
+Package: qt-kiosk-browser
+Architecture: any
+Depends: ${misc:Pre-Depends},
+	libqt5webengine5,
+	libqt5webkit5,
+	qml-module-qt-labs-folderlistmodel,
+	qml-module-qtquick-layouts,
+	qml-module-qtquick-window2,
+	qml-module-qtwebengine,
+	qtvirtualkeyboard-plugin
+Description: Qt5 based Kiosk Browser
+  ...

@@ -1,0 +1,5 @@
+qt-kiosk-browser (2020.01) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- Dongjin Kim <tobetter@ubuntu>  Wed, 28 Apr 2021 14:33:52 +0900

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+NAME=qt-kiosk-browser
+DEFAULT_URL="https://www.ossystems.com.br"
+
+if [ ! -f /etc/$NAME.conf ]; then
+	cat>/etc/$NAME.conf<<__EOF
+{
+    "URL": "$DEFAULT_URL"
+}
+__EOF
+fi
