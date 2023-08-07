@@ -1,7 +1,7 @@
 Source: qt-kiosk-browser
 Section: utils
 Priority: optional
-Maintainer: Dongjin Kim <tobetter@gmail.com>
+Maintainer: Rafael Diniz <rafael@rhizomatica.org>
 Build-Depends: debhelper (>= 9),
 	qtbase5-dev,
 	qtbase5-dev-tools,
@@ -22,4 +22,4 @@ Depends: ${misc:Pre-Depends},
 	qml-module-qtwebengine,
 	qtvirtualkeyboard-plugin
 Description: Qt5 based Kiosk Browser
-  ...
+  HERMES web-browser

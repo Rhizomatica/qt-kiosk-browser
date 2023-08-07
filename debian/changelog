@@ -1,5 +1,5 @@
-qt-kiosk-browser (2023.08) UNRELEASED; urgency=medium
+qt-kiosk-browser (1.0-1) UNRELEASED; urgency=medium
 
-  * Initial release. (Closes: #XXXXXX)
+  * Initial release.
 
- -- Dongjin Kim <tobetter@ubuntu>  Wed, 28 Apr 2021 14:33:52 +0900
+ -- Rafael Diniz <rafael@rhizomatica.org>  Mon, 07 Aug 2023 23:22:11 +0100
