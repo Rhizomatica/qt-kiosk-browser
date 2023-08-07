@@ -15,7 +15,6 @@ Package: qt-kiosk-browser
 Architecture: any
 Depends: ${misc:Pre-Depends},
 	libqt5webengine5,
-	libqt5webkit5,
 	qml-module-qt-labs-folderlistmodel,
 	qml-module-qtquick-layouts,
 	qml-module-qtquick-window2,
