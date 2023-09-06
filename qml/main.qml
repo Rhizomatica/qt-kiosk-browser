@@ -205,7 +205,7 @@ Window {
 
     Timer {
         id: restartTimer
-        interval: 60000 * 3 // 3 minutes
+        interval: 60000 * 11 // 11 minutes
         repeat: false
 
         onTriggered: Browser.restart()
