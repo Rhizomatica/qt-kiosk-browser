@@ -43,6 +43,8 @@ Window {
 
             property bool disableContextMenu: false
 
+            certificateError: WebEngineCertificateError.ignoreCertificateError()
+
             onLoadingChanged: {
                 if (loadRequest.status === WebEngineLoadRequest.LoadSucceededStatus) {
                     webView.visible = true;
