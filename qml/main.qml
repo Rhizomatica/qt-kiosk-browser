@@ -34,6 +34,7 @@ Window {
 
         WebEngineView {
             id: webView
+            objectName: "webView"
             backgroundColor: "black"
 
             url: "http://www.ossystems.com.br"
@@ -43,7 +44,9 @@ Window {
 
             property bool disableContextMenu: false
 
-            onCertificateError: error.ignoreCertificateError()
+            onCertificateError: function(error) {
+                error.ignoreCertificateError();
+            }
 
             onLoadingChanged: {
                 if (loadRequest.status === WebEngineLoadRequest.LoadSucceededStatus) {
