@@ -34,7 +34,6 @@ Window {
 
         WebEngineView {
             id: webView
-            objectName: "webView"
             backgroundColor: "black"
 
             url: "http://www.ossystems.com.br"
