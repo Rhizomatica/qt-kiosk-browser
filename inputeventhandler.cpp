@@ -17,7 +17,7 @@ InputEventHandler::InputEventHandler(QQuickItem *parent): QObject(parent)
 
 bool InputEventHandler::eventFilter(QObject *obj, QEvent *event)
 {
-    if (event->type() == QEvent::MouseButtonPress) {
+    if (event->type() == QEvent::MouseButtonPress || event->type() == QEvent::TouchBegin || event->type() == QEvent::MouseButtonPress || event->type() == QEvent::KeyPress) {
         emit triggered();
     }
 
