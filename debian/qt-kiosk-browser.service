@@ -1,6 +1,6 @@
 [Unit]
 Description=Qt Kiosk Browser
-After=nginx.service
+After=nginx.service network-online.target
 Conflicts=getty@tty1.service
 
 
