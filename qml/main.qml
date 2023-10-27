@@ -43,7 +43,9 @@ Window {
 
             property bool disableContextMenu: false
 
-            onCertificateError: error.ignoreCertificateError()
+            onCertificateError: function(error) {
+                error.ignoreCertificateError();
+            }
 
             onLoadingChanged: {
                 if (loadRequest.status === WebEngineLoadRequest.LoadSucceededStatus) {
