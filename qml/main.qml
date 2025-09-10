@@ -45,10 +45,6 @@ Window {
 
             property bool disableContextMenu: false
 
-            onCertificateError: function(error) {
-                return true
-            }
-
             onLoadingChanged: function(loadRequest) {
                 if (loadRequest.status == WebEngineView.LoadSucceededStatus) {
                     webView.visible = true;

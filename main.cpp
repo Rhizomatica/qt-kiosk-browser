@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
     qputenv("QML_XHR_ALLOW_FILE_READ", QByteArray("1"));
-    
+    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", QByteArray("--ignore-certificate-errors"));
+
     QtWebEngineQuick::initialize();
 
     QGuiApplication app(argc, argv);
@@ -41,17 +42,6 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
-
-
-    QObject *root = engine.rootObjects().first();
-    QQuickItem *webView = root->findChild<QQuickItem*>("webView");
-    if (webView) {
-        QObject *page = webView->property("page").value<QObject*>();
-        if (page) {
-            QObject::connect(page, SIGNAL(certificateError(QWebEngineCertificateError*)),
-                             page, SLOT(acceptCertificate(QWebEngineCertificateError*)));
-        }
-    }
     
     return app.exec();
 }
