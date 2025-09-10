@@ -20,6 +20,7 @@ Depends: ${misc:Pre-Depends},
         qml6-module-qtquick-window,
         qml6-module-qtwebengine,
         qt6-virtualkeyboard-plugin,
-        qml6-module-qt-labs-folderlistmodel
+        qml6-module-qt-labs-folderlistmodel,
+        qml6-module-qtqml-workerscript
 Description: Qt6 based Kiosk Browser
   HERMES web-browser

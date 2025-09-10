@@ -38,7 +38,7 @@ Window {
             id: webView
             backgroundColor: "black"
 
-            url: "http://www.ossystems.com.br"
+            url: "https://127.0.1.1"
 
             anchors.fill: parent
             visible: false
@@ -46,7 +46,7 @@ Window {
             property bool disableContextMenu: false
 
             onCertificateError: function(error) {
-                error.ignoreCertificateError();
+                return true
             }
 
             onLoadingChanged: function(loadRequest) {
