@@ -39,7 +39,19 @@ int main(int argc, char *argv[])
     qmlRegisterType<InputEventHandler>("Browser", 1, 0, "InputEventHandler");
 
     QQmlApplicationEngine engine;
+
     engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
 
+
+    QObject *root = engine.rootObjects().first();
+    QQuickItem *webView = root->findChild<QQuickItem*>("webView");
+    if (webView) {
+        QObject *page = webView->property("page").value<QObject*>();
+        if (page) {
+            QObject::connect(page, SIGNAL(certificateError(QWebEngineCertificateError*)),
+                             page, SLOT(acceptCertificate(QWebEngineCertificateError*)));
+        }
+    }
+    
     return app.exec();
 }
