@@ -6,12 +6,12 @@
 
 # Use Qt6 qmake for configure
 override_dh_auto_configure:
-	dh_auto_configure -- qmake=qt6-qmake
+	dh_auto_configure -- qmake=qmake6
 
 # Use Qt6 qmake for build
 override_dh_auto_build:
-	dh_auto_build -- qmake=qt6-qmake
+	dh_auto_build -- qmake=qmake6
 
 # Use Qt6 qmake for clean
 override_dh_auto_clean:
-	dh_auto_clean -- qmake=qt6-qmake
+	dh_auto_clean -- qmake=qmake6
