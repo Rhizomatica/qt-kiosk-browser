@@ -1,4 +1,17 @@
 #!/usr/bin/make -f
 
+# Minimal debhelper with overrides for Qt6 qmake
 %:
 	dh $@
+
+# Use Qt6 qmake for configure
+override_dh_auto_configure:
+	dh_auto_configure -- qmake=qt6-qmake
+
+# Use Qt6 qmake for build
+override_dh_auto_build:
+	dh_auto_build -- qmake=qt6-qmake
+
+# Use Qt6 qmake for clean
+override_dh_auto_clean:
+	dh_auto_clean -- qmake=qt6-qmake

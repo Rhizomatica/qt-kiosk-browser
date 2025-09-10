@@ -1,11 +1,5 @@
-qt-kiosk-browser (1.0-2) UNRELEASED; urgency=medium
+qt-kiosk-browser (2.0.0-1) unstable; urgency=medium
 
-  * Sync with upstream
+  * QT6 support
 
- -- Rafael Diniz <rafael@rhizomatica.org>  Tue, 06 Feb 2024 11:44:22 +0000
-
-qt-kiosk-browser (1.0-1) UNRELEASED; urgency=medium
-
-  * Ignore certificate errors.
-
- -- Rafael Diniz <rafael@rhizomatica.org>  Wed, 27 Sep 2023 20:00:01 +0100
+ -- Rafael Diniz <rafael@rhizomatica.org>  Wed, 10 Sep 2025 19:57:23 +0100
