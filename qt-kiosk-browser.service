@@ -1,11 +1,16 @@
 [Unit]
 Description=Qt Kiosk Browser
-DefaultDependencies=no
+After=nginx.service network-online.target
 Conflicts=getty@tty1.service
-After=systemd-user-sessions.service easysplash-quit.service
+
 
 [Service]
+Type=exec
+User=pi
+Group=pi
+Environment="QT_QPA_EGLFS_HIDECURSOR=1"
 ExecStart=/usr/bin/qt-kiosk-browser -platform eglfs /etc/qt-kiosk-browser.conf
+Restart=always
 
 [Install]
-Alias=display-manager.service
+WantedBy=multi-user.target
