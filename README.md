@@ -28,7 +28,7 @@ Defaults to 20 minutes.
 
 After entering in screen saving mode, restart browser after X milliseconds (0 to disable).
 
-Defaults to 3 minutes
+Defaults to 11 minutes.
 
 #### WebEngineSettings
 
@@ -46,5 +46,15 @@ Example:
     "WebEngineSettings": {
         "javascriptEnabled": false
     }
+}
+```
+
+Example with timers disabled:
+
+```json
+{
+    "URL": "https://example.com/",
+    "ScreenSaverTimeout": 0,
+    "RestartTimeout": 0
 }
 ```
