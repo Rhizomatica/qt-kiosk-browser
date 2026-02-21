@@ -1,4 +1,10 @@
 #!/usr/bin/make -f
 
+# Debian 13 defaults /usr/bin/qmake to Qt6; this package is still Qt5-based.
+export PATH := /usr/lib/qt5/bin:$(PATH)
+
 %:
 	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean -- QMAKE=/usr/lib/qt5/bin/qmake
