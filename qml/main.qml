@@ -148,7 +148,9 @@ Window {
                         }
 
                         if (typeof settings["VirtualKeyboardAvailableLocales"] != "undefined") {
+                            console.log("Available locales: " + VirtualKeyboardSettings.availableLocales);
                             VirtualKeyboardSettings.activeLocales = settings["VirtualKeyboardAvailableLocales"];
+                            console.log("Active locales set to: " + VirtualKeyboardSettings.activeLocales);
                         }
                     } catch (e) {
                         console.error("Failed to parse settings file: " + e)
