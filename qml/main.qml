@@ -10,6 +10,7 @@ import QtQuick 2.0
 import QtQuick.Window 2.1
 import QtWebEngine 1.4
 import QtQuick.VirtualKeyboard 2.1
+import QtQuick.VirtualKeyboard.Settings 2.2
 
 import Browser 1.0
 
@@ -140,6 +141,14 @@ Window {
 
                         if (typeof settings["DisableContextMenu"] != "undefined") {
                             webView.disableContextMenu = settings["DisableContextMenu"];
+                        }
+
+                        if (typeof settings["VirtualKeyboardLocale"] != "undefined") {
+                            VirtualKeyboardSettings.locale = settings["VirtualKeyboardLocale"];
+                        }
+
+                        if (typeof settings["VirtualKeyboardAvailableLocales"] != "undefined") {
+                            VirtualKeyboardSettings.availableLocales = settings["VirtualKeyboardAvailableLocales"];
                         }
                     } catch (e) {
                         console.error("Failed to parse settings file: " + e)
